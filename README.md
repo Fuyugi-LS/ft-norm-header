@@ -35,9 +35,8 @@ You can configure the header's content by opening your VSCode `settings.json` fi
 
 ## Installation (from GitHub)
 
-1.  Go to the [Releases](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO/releases) page of this repository.
+1.  Go to the [Releases](https://github.com/Fuyugi-LS/ft-norm-header/releases) page of this repository.
 2.  Download the latest `.vsix` file.
 3.  In VSCode, go to the **Extensions** tab.
 4.  Click the **`...`** (More Actions) menu and select **"Install from VSIX..."**.
 5.  Choose the `.vsix` file you just downloaded.
-````
