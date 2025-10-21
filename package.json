@@ -1,0 +1,65 @@
+{
+  "name": "ft-norm-header",
+  "displayName": "F.Tycoon Norm Header",
+  "version": "0.1.0",
+  "publisher": "Fuyugi",
+  "description": "Inserts the F.Tycoon norm-compliant header.",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onLanguage:lua",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:python"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ft-norm-header.addHeader",
+        "title": "F.Tycoon: Add Norm Header"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "F.Tycoon Norm",
+        "properties": {
+          "ft-norm-header.authorName": {
+            "type": "string",
+            "default": "lorem",
+            "description": "The author's name (e.g., 'lorem', '63905')."
+          },
+          "ft-norm-header.authorAddress": {
+            "type": "string",
+            "default": "github.com/loremipsum",
+            "description": "The author's address (e.g., 'github.com/loremipsum', '63905@kmitl.ac.th')."
+          },
+          "ft-norm-header.projectName": {
+            "type": "string",
+            "default": "projectName",
+            "description": "The project name displayed in the ASCII art."
+          },
+          "ft-norm-header.copyright": {
+            "type": "string",
+            "default": "© \"projectName\" - All rights reserved",
+            "description": "The copyright string."
+          }
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ft-norm-header.addHeader",
+        "key": "ctrl+alt+g",
+        "when": "editorTextFocus && (resourceLangId == lua || resourceLangId == javascript || resourceLangId == typescript || resourceLangId == python)"
+      },
+      {
+        "command": "ft-norm-header.addHeader",
+        "key": "cmd+alt+g",
+        "mac": "cmd+alt+g",
+        "when": "editorTextFocus && (resourceLangId == lua || resourceLangId == javascript || resourceLangId == typescript || resourceLangId == python)"
+      }
+    ]
+  }
+}
